@@ -1347,6 +1347,14 @@ void *Sys_LoadFunction( void *handle, const char *name );
 int   Sys_LoadFunctionErrors( void );
 void  Sys_UnloadLibrary( void *handle );
 
+typedef struct {
+	int commandId;
+} renderOmnibot_t;
+
+void	Sys_OmnibotLoad();
+void	Sys_OmnibotUnLoad();
+const void * Sys_OmnibotRender( const void *data );
+
 // NOTE TTimo - on win32 the cwd is prepended .. non portable behaviour
 void Sys_StartProcess( const char *exeName, qboolean doexit );            // NERVE - SMF
 void Sys_OpenURL( const char *url, qboolean doexit );                       // NERVE - SMF

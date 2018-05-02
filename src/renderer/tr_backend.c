@@ -1943,6 +1943,9 @@ void RB_ExecuteRenderCommands( const void *data ) {
 		case RC_FINISH:
 			data = RB_Finish( data );
 			break;
+		case RC_DRAW_OMNIBOT:
+			data = Sys_OmnibotRender( data );
+			break;
 		case RC_END_OF_LIST:
 		default:
 			// stop rendering

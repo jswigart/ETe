@@ -1563,6 +1563,7 @@ extern cvar_t  *r_useFirstPersonEnvMaps;
 void R_SwapBuffers( int );
 
 void R_RenderView( const viewParms_t *parms );
+void R_RenderOmnibot();
 
 void R_AddMD3Surfaces( trRefEntity_t *e );
 void R_AddNullModelSurfaces( trRefEntity_t *e );
@@ -2153,7 +2154,8 @@ typedef enum {
 	RC_COLORMASK,
 	RC_CLEARDEPTH,
 	RC_RENDERTOTEXTURE, //bani
-	RC_FINISH   //bani
+	RC_FINISH,   //bani
+	RC_DRAW_OMNIBOT
 } renderCommand_t;
 
 // these are sort of arbitrary limits.
@@ -2199,6 +2201,7 @@ extern int max_polyverts;
 
 extern	backEndData_t	*backEndData;
 
+void *R_GetCommandBuffer(int bytes);
 void RB_ExecuteRenderCommands( const void *data );
 void RB_TakeScreenshot( int x, int y, int width, int height, const char *fileName );
 void RB_TakeScreenshotJPEG( int x, int y, int width, int height, const char *fileName );

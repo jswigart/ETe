@@ -1125,3 +1125,36 @@ qboolean Sys_IsNumLockDown( void ) {
 
 	return qfalse;
 }
+
+HINSTANCE omnibotHandle = NULL;
+typedef void (*pfnOmnibotRenderOGL)();
+pfnOmnibotRenderOGL gOmnibotRenderFunc = 0;
+
+void	Sys_OmnibotLoad()
+{
+	const char * omnibotLibrary = Cvar_VariableString( "omnibot_library" );
+	if ( omnibotLibrary != NULL && omnibotLibrary[0] != '\0' )
+	{
+		omnibotHandle = LoadLibrary( omnibotLibrary );
+		if ( omnibotHandle )
+		{
+			gOmnibotRenderFunc = (pfnOmnibotRenderOGL)GetProcAddress( omnibotHandle, "RenderOpenGL" );
+		}
+	}
+}
+
+void	Sys_OmnibotUnLoad()
+{
+	FreeLibrary( omnibotHandle );
+	omnibotHandle = NULL;
+}
+
+const void * Sys_OmnibotRender( const void * data )
+{
+	renderOmnibot_t * cmd = (renderOmnibot_t*)data;
+	if ( gOmnibotRenderFunc )
+	{
+		gOmnibotRenderFunc();
+	}
+	return (const void *)( cmd + 1 );
+}
