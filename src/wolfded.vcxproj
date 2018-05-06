@@ -12,17 +12,17 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7815162A-BB04-4C87-919D-415B1C1ED2FF}</ProjectGuid>
-    <WindowsTargetPlatformVersion>7.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <UseOfMfc>false</UseOfMfc>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -41,8 +41,8 @@
     <_ProjectFileVersion>15.0.26419.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)ded\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)ded\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
     <EmbedManifest>false</EmbedManifest>
     <GenerateManifest>false</GenerateManifest>
@@ -50,8 +50,8 @@
     <TargetName>ETe-ded</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)ded\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)ded\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</IntDir>
     <LinkIncremental>false</LinkIncremental>
     <GenerateManifest>true</GenerateManifest>
     <EmbedManifest>true</EmbedManifest>

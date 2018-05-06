@@ -25,13 +25,13 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
-    <PlatformToolset>v141_xp</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
@@ -65,16 +65,16 @@
     <_ProjectFileVersion>14.0.25431.1</_ProjectFileVersion>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>$(SolutionDir)jpeg-8c\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)jpeg-8c\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <OutDir>.\build\libjpeg_debug_x64\</OutDir>
     <IntDir>.\build\libjpeg_debug_x64\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <OutDir>$(SolutionDir)jpeg-8c\$(Configuration)\</OutDir>
-    <IntDir>$(SolutionDir)jpeg-8c\$(Configuration)\</IntDir>
+    <OutDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)build\$(ProjectName)\$(PlatformName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>.\build\libjpeg_release_x64\</OutDir>
